@@ -26,6 +26,7 @@ jobs:
         with:
           name: backend-code-coverage-report
           path: packages/backend/coverage
+          retention-days: 5
 
   test_frontend:
     runs-on: ubuntu-latest
@@ -46,6 +47,7 @@ jobs:
         with:
           name: frontend-code-coverage-report
           path: packages/frontend/coverage
+          retention-days: 5
 
   publish_backend_coverage_result:
     runs-on: ubuntu-latest
@@ -55,6 +57,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: backend-code-coverage-report
+          working-directory: packages/backend/coverage
+      - name: Display structure of downloaded files
+        run: ls -R packages/backend/
       - name: Publish backend code coverage result
         uses: coverallsapp/github-action@master
         with:
@@ -71,6 +76,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: frontend-code-coverage-report
+          working-directory: packages/backend/coverage
       - name: Publish frontend code coverage result
         uses: coverallsapp/github-action@master
         with:
