@@ -1,0 +1,74 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test_backend:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm ci
+      - run: npm run backend:test
+      - name: Archive code coverage result
+        uses: actions/upload-artifact@v3
+        with:
+          name: backend-code-coverage-report
+          path: packages/backend/coverage
+
+  test_fronted:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm ci
+      - run: npm run frontend:test
+      - name: Archive code coverage result
+        uses: actions/upload-artifact@v3
+        with:
+          name: frontend-code-coverage-report
+          path: packages/frontend/coverage
+
+  publish_coverage_result:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download backend code coverage result
+        uses: actions/download-artifact@v3
+        with:
+          name: backend-code-coverage-report
+      - name: Publish backend code coverage result
+        uses: coverallsapp/github-action@master
+        with:
+          path-to-lcov: packages/backend/coverage/lcov.info
+          base-path: packages/backend
+          flag-name: frontend-${{ matrix.node-version }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download fronted code coverage result
+        uses: actions/download-artifact@v3
+        with:
+          name: frontend-code-coverage-report
+      - name: Publish frontend code coverage result
+        uses: coverallsapp/github-action@master
+        with:
+          path-to-lcov: packages/frontend/coverage/lcov.info
+          base-path: packages/frontend
+          flag-name: frontend-${{ matrix.node-version }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
