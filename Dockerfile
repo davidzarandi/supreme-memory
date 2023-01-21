@@ -30,4 +30,4 @@ COPY --from=backend_build /usr/src/app/packages/backend/dist /usr/src/app
 COPY --from=frontend_build /usr/src/app/packages/frontend/dist public
 
 EXPOSE 3000 # TODO: change me
-CMD node main.js
+ENTRYPOINT node main.js
