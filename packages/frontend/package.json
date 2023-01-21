@@ -1,0 +1,10 @@
+{
+  "name": "supreme-memory-frontend",
+  "description": "Frontend application",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Zarandi",
+  "license": "BSD-3-Clause"
+}

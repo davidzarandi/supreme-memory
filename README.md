@@ -1,2 +1,3 @@
 # supreme-memory
-This is a trello like application for project management
+
+This is a project management application

@@ -1,0 +1,19 @@
+{
+  "name": "supreme-memory",
+  "version": "0.0.1",
+  "description": "This is a project management application",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azuwey/supreme-memory.git"
+  },
+  "author": "David Zarandi",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/azuwey/supreme-memory/issues"
+  },
+  "homepage": "https://github.com/azuwey/supreme-memory#readme",
+  "workspaces": [
+    "packages/frontend",
+    "packages/backend"
+  ]
+}
