@@ -57,9 +57,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: backend-code-coverage-report
-          working-directory: packages/backend/coverage
+          working-directory: ./packages/backend/coverage
       - name: Display structure of downloaded files
-        run: ls -R packages/backend/
+        run: ls -R
       - name: Publish backend code coverage result
         uses: coverallsapp/github-action@master
         with:
