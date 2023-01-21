@@ -2,6 +2,23 @@
   "name": "supreme-memory",
   "version": "0.0.1",
   "description": "This is a project management application",
+  "scripts": {
+    "frontend:build": "npm run build -w packages/frontend",
+    "frontend:start:dev": "npm run start:dev -w packages/frontend",
+    "frontend:start:prev": "npm run start:prev -w packages/frontend",
+    "frontend:lint": "npm run lint -w packages/frontend",
+    "frontend:lint:fix": "npm run lint:fix -w packages/frontend",
+    "frontend:format": "npm run format -w packages/frontend",
+    "frontend:test": "npm run test -w packages/frontend",
+    "backend:build": "npm run build -w packages/backend",
+    "backend:start:dev": "npm run start:dev -w packages/backend",
+    "backend:start:prev": "npm run start:prev -w packages/backend",
+    "backend:start:prod": "npm run start:prod -w packages/backend",
+    "backend:lint": "npm run lint -w packages/backend",
+    "backend:lint:fix": "npm run lint:fix -w packages/backend",
+    "backend:format": "npm run format -w packages/backend",
+    "backend:test": "npm run test -w packages/backend"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/azuwey/supreme-memory.git"
