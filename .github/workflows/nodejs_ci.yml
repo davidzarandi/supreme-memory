@@ -76,7 +76,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: frontend-code-coverage-report
-          path: packages/backend/coverage
+          path: packages/frontend/coverage
       - name: Publish frontend code coverage result
         uses: coverallsapp/github-action@master
         with:
