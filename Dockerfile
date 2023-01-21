@@ -29,5 +29,5 @@ COPY --from=dependencies /usr/src/app/prod_node_modules node_modules
 COPY --from=backend_build /usr/src/app/packages/backend/dist /usr/src/app
 COPY --from=frontend_build /usr/src/app/packages/frontend/dist public
 
-EXPOSE 3000 # TODO: change me
+EXPOSE 3001 # TODO: change me
 ENTRYPOINT node main.js
