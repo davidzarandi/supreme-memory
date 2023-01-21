@@ -27,7 +27,7 @@ jobs:
           name: backend-code-coverage-report
           path: packages/backend/coverage
 
-  test_fronted:
+  test_frontend:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -49,7 +49,7 @@ jobs:
 
   publish_backend_coverage_result:
     runs-on: ubuntu-latest
-    needs: [test_backend]
+    needs: test_backend
     steps:
       - name: Download backend code coverage result
         uses: actions/download-artifact@v3
@@ -60,12 +60,12 @@ jobs:
         with:
           path-to-lcov: packages/backend/coverage/lcov.info
           base-path: packages/backend
-          flag-name: frontend-${{ matrix.node-version }}
+          flag-name: backend-${{ matrix.node-version }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
   publish_frontend_coverage_result:
     runs-on: ubuntu-latest
-    needs: [test_frontend]
+    needs: test_frontend
     steps:
       - name: Download frontend code coverage result
         uses: actions/download-artifact@v3
