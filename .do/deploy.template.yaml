@@ -1,7 +1,8 @@
 spec:
-  name: sample-golang
+  name: supreme-memory
   services:
     - name: web
       git:
         branch: main
         repo_clone_url: https://github.com/azuwey/supreme-memory.git
+      dockerfile_path: ./Dockerfile
