@@ -20,6 +20,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci
+      - run: npm run backend:lint
+      - run: npm run backend:format:check
       - run: npm run backend:test
       - name: Archive code coverage result
         uses: actions/upload-artifact@v3
@@ -41,6 +43,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci
+      - run: npm run frontend:lint
+      - run: npm run frontend:format:check
       - run: npm run frontend:test
       - name: Archive code coverage result
         uses: actions/upload-artifact@v3
