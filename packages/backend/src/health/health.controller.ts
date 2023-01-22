@@ -13,14 +13,11 @@ export class HealthController {
   @Get()
   @HealthCheck()
   checkHealth() {
-    const protocol = this.configService.get<string>("protocol");
-    const host = this.configService.get<string>("host");
-    const port = this.configService.get<number>("port");
-    const baseUrl = `${protocol}://${host}:${port}`;
+    const applicationUrl = this.configService.getOrThrow<string>("applicationUrl");
 
     return this.healthCheckService.check([
-      () => this.http.pingCheck("Static site", baseUrl),
-      () => this.http.pingCheck("Api check", `${baseUrl}/api`),
+      () => this.http.pingCheck("Static site", applicationUrl),
+      () => this.http.pingCheck("Api check", `${applicationUrl}/api`),
     ]);
   }
 }
