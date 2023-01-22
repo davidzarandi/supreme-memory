@@ -6,7 +6,7 @@ import { HealthController } from "./health.controller";
 
 describe("HealthController", () => {
   let controller: HealthController;
-  const configService = { get: jest.fn() };
+  const configService = { getOrThrow: jest.fn() };
   const healthCheckService = {
     check: jest.fn(),
   };
@@ -52,7 +52,7 @@ describe("HealthController", () => {
           }
         });
       controller.checkHealth();
-      expect(configService.get).toHaveBeenCalled();
+      expect(configService.getOrThrow).toHaveBeenCalled();
     });
   });
 });
