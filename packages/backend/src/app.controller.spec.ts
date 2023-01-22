@@ -3,19 +3,28 @@ import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 
 describe("AppController", () => {
-  let app: TestingModule;
+  let controller: AppController;
+  const appService = { getHello: () => "Hello" };
 
   beforeAll(async () => {
-    app = await Test.createTestingModule({
+    const module: TestingModule = await Test.createTestingModule({
       controllers: [AppController],
       providers: [AppService],
-    }).compile();
+    })
+      .overrideProvider(AppService)
+      .useValue(appService)
+      .compile();
+
+    controller = module.get<AppController>(AppController);
+  });
+
+  it("should be defined", () => {
+    expect(controller).toBeDefined();
   });
 
   describe("getHello", () => {
-    it('should return "Hello World!"', () => {
-      const appController = app.get(AppController);
-      expect(appController.getHello()).toBe("Hello World!");
+    it('should return "Hello"', () => {
+      expect(controller.getHello()).toBe("Hello");
     });
   });
 });

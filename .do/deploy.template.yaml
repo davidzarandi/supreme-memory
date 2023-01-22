@@ -4,6 +4,14 @@ spec:
     - name: web
       git:
         branch: main
+        deploy_on_push: true
         repo_clone_url: https://github.com/azuwey/supreme-memory.git
       dockerfile_path: ./Dockerfile
       http_port: 3001
+      envs:
+        - key: APPLICATION_URL
+          scope: RUN_TIME
+          value: "http://localhost:3001"
+      health_check:
+        timeout_seconds: 10
+        http_path: /api/health
