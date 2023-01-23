@@ -3,19 +3,20 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    versioning-strategy: lockfile-only
 
   - package-ecosystem: "npm"
     directory: "/packages/backend"
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/packages/frontend"
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
