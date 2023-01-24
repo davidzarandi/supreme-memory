@@ -15,7 +15,7 @@
   "author": "David Zarandi",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "@nestjs/cli": "^9.1.8",
+    "@nestjs/cli": "^9.1.9",
     "@nestjs/schematics": "^9.0.4",
     "@nestjs/testing": "^9.2.1",
     "@types/express": "^4.17.16",
