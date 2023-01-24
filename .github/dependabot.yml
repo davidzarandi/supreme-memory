@@ -1,9 +1,11 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "."
+    directory: "/"
     schedule:
       interval: "daily"
+      timezone: "Europe/Berlin"
+      time: "09:00"
 
 #  - package-ecosystem: "npm"
 #    directory: "/packages/backend"
