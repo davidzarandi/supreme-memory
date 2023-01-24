@@ -4,19 +4,24 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    versioning-strategy: lockfile-only
 
-  - package-ecosystem: "npm"
-    directory: "/packages/backend"
-    schedule:
-      interval: "daily"
+#  - package-ecosystem: "npm"
+#    directory: "/packages/backend"
+#    schedule:
+#      interval: "daily"
+#      timezone: "Europe/Berlin"
+#      time: "09:00"
 
-  - package-ecosystem: "npm"
-    directory: "/packages/frontend"
-    schedule:
-      interval: "daily"
+#  - package-ecosystem: "npm"
+#    directory: "/packages/frontend"
+#    schedule:
+#      interval: "daily"
+#      timezone: "Europe/Berlin"
+#      time: "09:00"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
+      timezone: "Europe/Berlin"
+      time: "09:00"
