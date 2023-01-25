@@ -11,6 +11,5 @@ release, so you it on your own risk!
 
 ## Deploy
 
-I highly recommend to deploy this application using DigitalOcean's App platform, you can use this button, to do it:
+[TODO: Write deployment guide in wiki](https://github.com/azuwey/supreme-memory/issues/18)
 
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/azuwey/supreme-memory/tree/main)
