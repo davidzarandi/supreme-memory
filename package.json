@@ -33,6 +33,7 @@
   "homepage": "https://github.com/azuwey/supreme-memory#readme",
   "workspaces": [
     "packages/frontend",
-    "packages/backend"
+    "packages/backend",
+    "services/api-gateway"
   ]
 }
