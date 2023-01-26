@@ -5,7 +5,7 @@ export declare enum SERVICES {
     HEALTH_CHECKER = 1
 }
 type ServiceMap = {
-    [value in SERVICES]: {
+    [key in keyof typeof SERVICES]: {
         name: string;
         transport: Transport;
         options: {
@@ -18,6 +18,7 @@ type ServiceMap = {
 };
 type GlobalConfiguration = {
     SERVICES: ServiceMap;
+    SERVICE_DEFAULT_TIMEOUT: number;
 };
 export declare const GLOBAL_CONFIGURATION: GlobalConfiguration;
 export {};

@@ -4,6 +4,7 @@ export const API_GATEWAY_PORT = 3000;
 const SERVICE_PORT_OFFSET = 1;
 const NUMBER_OF_RETRY_ATTEMPTS = 5;
 const RETRY_DELAY_IN_MS = 1000;
+const SERVICE_DEFAULT_TIMEOUT = NUMBER_OF_RETRY_ATTEMPTS * RETRY_DELAY_IN_MS;
 
 export enum SERVICES {
   AUTH,
@@ -11,7 +12,7 @@ export enum SERVICES {
 }
 
 type ServiceMap = {
-  [value in SERVICES]: {
+  [key in keyof typeof SERVICES]: {
     name: string;
     transport: Transport;
     options: {
@@ -25,6 +26,7 @@ type ServiceMap = {
 
 type GlobalConfiguration = {
   SERVICES: ServiceMap;
+  SERVICE_DEFAULT_TIMEOUT: number;
 };
 
 const getPort = (service: SERVICES) => {
@@ -32,8 +34,9 @@ const getPort = (service: SERVICES) => {
 };
 
 export const GLOBAL_CONFIGURATION: GlobalConfiguration = {
+  SERVICE_DEFAULT_TIMEOUT,
   SERVICES: {
-    [SERVICES.AUTH]: {
+    AUTH: {
       name: "AUTH",
       transport: Transport.TCP,
       options: {
@@ -43,7 +46,7 @@ export const GLOBAL_CONFIGURATION: GlobalConfiguration = {
         host: "::",
       },
     },
-    [SERVICES.HEALTH_CHECKER]: {
+    HEALTH_CHECKER: {
       name: "HEALTH_CHECKER",
       transport: Transport.TCP,
       options: {
