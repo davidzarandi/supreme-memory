@@ -1,6 +1,6 @@
-# Health checker service
+# Health Checker service
 
-This microservice comprises two main components: the `AppService` and the `AppController`.
+The microservice comprises two main components: the `AppService` and the `AppController`.
 
 The `AppService` is responsible for performing the actual health checks. It uses the `HealthCheckService` and
 `MicroserviceHealthIndicator` from the `@nestjs/terminus` package to perform the checks. The `checkHealth()` method of
