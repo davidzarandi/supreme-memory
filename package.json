@@ -1,7 +1,8 @@
 {
-  "name": "supreme-memory",
+  "name": "@supreme-memory",
   "version": "0.0.1",
   "description": "This is a project management application",
+  "private": true,
   "scripts": {
     "frontend:build": "npm run build -w packages/frontend",
     "frontend:start:dev": "npm run start:dev -w packages/frontend",
@@ -19,7 +20,10 @@
     "backend:lint:fix": "npm run lint:fix -w packages/backend",
     "backend:format": "npm run format -w packages/backend",
     "backend:format:check": "npm run format:check -w packages/backend",
-    "backend:test": "npm run test -w packages/backend"
+    "backend:test": "npm run test -w packages/backend",
+    "build:dev": "npm run build:dev -w",
+    "start:dev": "npm run start:dev -w",
+    "test": "npm run test -w"
   },
   "repository": {
     "type": "git",
@@ -34,6 +38,9 @@
   "workspaces": [
     "packages/frontend",
     "packages/backend",
-    "services/api-gateway"
+    "packages/global-configuration",
+    "services/api-gateway",
+    "services/auth",
+    "services/health-checker"
   ]
 }

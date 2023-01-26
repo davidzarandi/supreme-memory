@@ -1,9 +1,8 @@
 import { Module } from "@nestjs/common";
-import { ClientsModule } from "@nestjs/microservices";
-import { AppController } from "./app.controller";
+
+import { HealthModule } from "./health/health.module";
 
 @Module({
-  imports: [ClientsModule.registerAsync([])],
-  controllers: [AppController],
+  imports: [HealthModule],
 })
 export class AppModule {}
