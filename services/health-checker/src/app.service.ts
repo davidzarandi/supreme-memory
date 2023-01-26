@@ -7,7 +7,7 @@ import {
 } from "@nestjs/terminus";
 import { from, Observable } from "rxjs";
 
-import { GLOBAL_CONFIGURATION, SERVICES } from "@supreme-memory/global-configuration";
+import { GLOBAL_CONFIGURATION } from "@supreme-memory/global-configuration";
 
 @Injectable()
 export class AppService {
@@ -21,9 +21,6 @@ export class AppService {
   }
 
   private checkAuthService(): Promise<HealthIndicatorResult> {
-    return this.microservice.pingCheck(
-      "auth-service",
-      GLOBAL_CONFIGURATION.SERVICES[SERVICES.AUTH],
-    );
+    return this.microservice.pingCheck("auth-service", GLOBAL_CONFIGURATION.SERVICES.AUTH);
   }
 }
