@@ -1,9 +1,13 @@
 {
-  "types": ["jest"],
+  "types": [
+    "jest"
+  ],
   "compilerOptions": {
     "target": "ESNext",
     "module": "commonjs",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "moduleResolution": "Node",
     "strict": true,
     "sourceMap": true,
@@ -22,5 +26,7 @@
     "baseUrl": "src",
     "paths": {}
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }
