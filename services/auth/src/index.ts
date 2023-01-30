@@ -1,7 +1,7 @@
 import { NestFactory } from "@nestjs/core";
 import { MicroserviceOptions } from "@nestjs/microservices";
 
-import { GLOBAL_CONFIGURATION } from "@supreme-memory/global-configuration";
+import { GLOBAL_CONFIGURATION } from "@workspaces/global-config-env";
 import { AppModule } from "./app.module";
 
 async function bootstrap() {

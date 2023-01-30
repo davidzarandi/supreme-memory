@@ -1,6 +1,7 @@
 # -- base --
 FROM node:lts-alpine as base
 WORKDIR /usr/src/app
+RUN apk add --no-cache libc6-compat
 RUN npm i -g npm @nestjs/cli
 
 # -- dependencies --

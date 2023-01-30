@@ -34,4 +34,7 @@
 # Editors
 .idea
 
+# Turborepo
+**/.turbo
+
 Dockerfile

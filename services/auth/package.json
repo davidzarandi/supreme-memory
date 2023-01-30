@@ -1,10 +1,16 @@
 {
-  "name": "@supreme-memory/auth",
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@workspaces/auth",
   "main": "src/index.ts",
   "private": true,
   "scripts": {
+    "build": "babel src --out-dir dist --extensions \".ts\"",
     "start:dev": "ts-node-dev --respawn src/index.ts",
-    "test": "jest --config jest.config.cjs --coverage"
+    "test": "jest --config jest.config.cjs --coverage",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -20,25 +26,14 @@
     "@nestjs/common": "^9.2.1",
     "@nestjs/core": "^9.2.1",
     "@nestjs/microservices": "^9.2.1",
-    "@nestjs/terminus": "^9.1.4",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0"
   },
   "devDependencies": {
-    "@nestjs/testing": "^9.2.1",
-    "@types/eslint": "^8.4.10",
-    "@types/jest": "^29.4.0",
-    "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "@typescript-eslint/parser": "^5.49.0",
-    "eslint": "^8.32.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-jest": "^27.2.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "jest": "^29.4.0",
-    "prettier": "^2.8.3",
-    "ts-jest": "^29.0.5",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^4.9.4"
+    "@workspaces/babel-config-custom": "*",
+    "@workspaces/eslint-config-custom": "*",
+    "@workspaces/global-config-env": "*",
+    "@workspaces/jest-config-custom": "*",
+    "@workspaces/ts-config-custom": "*"
   }
 }

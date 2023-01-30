@@ -6,10 +6,9 @@ This is a project management application.
 
 ## Disclaimer
 
-Currently, the project is not yet stable (***not production ready!!!***) and everything changing until the 1.0.0
+Currently, the project is not yet stable (**_not production ready!!!_**) and everything changing until the 1.0.0
 release, so you it on your own risk!
 
 ## Deploy
 
 [TODO: Write deployment guide in wiki](https://github.com/azuwey/supreme-memory/issues/18)
-

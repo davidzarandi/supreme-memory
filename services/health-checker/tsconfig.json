@@ -1,32 +1,5 @@
 {
-  "types": [
-    "jest"
-  ],
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "commonjs",
-    "lib": [
-      "ESNext"
-    ],
-    "moduleResolution": "Node",
-    "strict": true,
-    "sourceMap": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "skipLibCheck": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "incremental": true,
-    "removeComments": true,
-    "outDir": "dist",
-    "baseUrl": "src",
-    "paths": {}
-  },
-  "include": [
-    "src"
-  ]
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@workspaces/ts-config-custom/service.json",
+  "include": ["src"]
 }

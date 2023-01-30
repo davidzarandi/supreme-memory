@@ -33,7 +33,7 @@ describe("AppService", () => {
   describe("checkHealth", () => {
     it("should call the health check functions", () => {
       health.check = jest.fn().mockImplementation((callbackArray: (() => void)[]) => {
-        callbackArray.forEach((cb) => cb.apply(appService));
+        callbackArray.forEach((cb) => cb());
         return Promise.resolve("OK");
       });
       appService.checkHealth();

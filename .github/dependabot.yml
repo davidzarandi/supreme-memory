@@ -7,19 +7,19 @@ updates:
       timezone: "Europe/Berlin"
       time: "09:00"
 
-#  - package-ecosystem: "npm"
-#    directory: "/packages/backend"
-#    schedule:
-#      interval: "daily"
-#      timezone: "Europe/Berlin"
-#      time: "09:00"
+  #  - package-ecosystem: "npm"
+  #    directory: "/packages/backend"
+  #    schedule:
+  #      interval: "daily"
+  #      timezone: "Europe/Berlin"
+  #      time: "09:00"
 
-#  - package-ecosystem: "npm"
-#    directory: "/packages/frontend"
-#    schedule:
-#      interval: "daily"
-#      timezone: "Europe/Berlin"
-#      time: "09:00"
+  #  - package-ecosystem: "npm"
+  #    directory: "/packages/frontend"
+  #    schedule:
+  #      interval: "daily"
+  #      timezone: "Europe/Berlin"
+  #      time: "09:00"
 
   - package-ecosystem: "github-actions"
     directory: "/"

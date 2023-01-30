@@ -33,3 +33,6 @@
 
 # Editors
 .idea
+
+# Turborepo
+**/.turbo

@@ -7,7 +7,7 @@ import {
 } from "@nestjs/terminus";
 import { from, Observable } from "rxjs";
 
-import { GLOBAL_CONFIGURATION } from "@supreme-memory/global-configuration";
+import { GLOBAL_CONFIGURATION } from "@workspaces/global-config-env";
 
 @Injectable()
 export class AppService {
@@ -17,7 +17,7 @@ export class AppService {
   ) {}
 
   checkHealth(): Observable<HealthCheckResult> {
-    return from(this.health.check([this.checkAuthService]));
+    return from(this.health.check([() => this.checkAuthService()]));
   }
 
   private checkAuthService(): Promise<HealthIndicatorResult> {
