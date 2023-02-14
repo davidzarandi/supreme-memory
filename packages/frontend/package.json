@@ -17,7 +17,7 @@
   "author": "David Zarandi",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "solid-js": "^1.6.10"
+    "solid-js": "^1.6.11"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
