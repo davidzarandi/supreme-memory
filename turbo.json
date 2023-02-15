@@ -2,8 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "codegen": {
-      "inputs": ["templates/**"],
-      "outputs": [".generated"]
+      "inputs": ["templates/**"]
     },
     "format": {
       "outputs": ["*.json", "*.tsx", "*.ts", "*.js", "*.md"]
@@ -11,6 +10,6 @@
   },
   "globalDependencies": [
     "/repositories/shared/config-prettier/index.json",
-    "/repositories/shared/config-ts/*.json"
+    "/repositories/shared/config-ts/.generated/*.json"
   ]
 }
