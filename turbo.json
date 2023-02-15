@@ -1,14 +1,11 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
-    "build": {
-      "outputs": ["dist/**"]
+    "codegen": {
+      "inputs": ["templates/**"]
     },
-    "start:dev": {},
-    "test": {},
-    "lint": {},
-    "lint:fix": {},
-    "format": {},
-    "format:fix": {}
+    "format": {
+      "outputs": ["*.json", "*.tsx", "*.ts", "*.js", "*.md"]
+    }
   }
 }

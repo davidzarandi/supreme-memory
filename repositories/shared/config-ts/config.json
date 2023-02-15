@@ -1,0 +1,11 @@
+{
+  "service.dev.config.json": [
+    "./templates/base.json",
+    "./templates/service.build.json",
+    "./templates/service.dev.json"
+  ],
+  "service.build.config.json": ["./templates/base.json", "./templates/service.build.json"],
+  "worker.dev.config.json": ["./templates/base.json", "./templates/service.build.json", "./templates/service.dev.json"],
+  "worker.build.config.json": ["./templates/base.json", "./templates/service.build.json"],
+  "static-site.config.json": ["./templates/base.json", "./templates/static-site.json"]
+}

@@ -1,5 +1,0 @@
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@workspaces/ts-config-custom/ui.json",
-  "include": ["src"]
-}

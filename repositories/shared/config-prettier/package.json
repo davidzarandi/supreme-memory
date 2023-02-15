@@ -1,0 +1,9 @@
+{
+  "name": "@shared/config-prettier",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.json",
+  "scripts": {
+    "format": "prettier --config ./index.json --write \"./**/*.{json,tsx,ts,js,md}\""
+  }
+}

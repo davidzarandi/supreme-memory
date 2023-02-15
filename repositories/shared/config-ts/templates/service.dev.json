@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "service-dev",
+  "compilerOptions": {
+    "sourceMap": true,
+    "sourceRoot": "../src"
+  }
+}

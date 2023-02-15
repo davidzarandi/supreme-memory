@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@shared/config-ts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "codegen": "ts-config-merger -- outputFolder=.generated",
+    "format": "prettier --write \"./**/*.{json,tsx,ts,js,md}\""
+  },
+  "devDependencies": {
+    "@shared/config-prettier": "^1.0.0",
+    "ts-config-merger": "^1.0.3"
+  }
+}

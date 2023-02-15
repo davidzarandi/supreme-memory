@@ -1,0 +1,8 @@
+{
+  "name": "@shared/config-eslint",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"./**/*.{json,tsx,ts,js,md}\""
+  }
+}
