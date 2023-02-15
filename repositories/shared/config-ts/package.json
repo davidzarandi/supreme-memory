@@ -6,7 +6,9 @@
   "scripts": {
     "codegen": "ts-config-merger -- outputFolder=.generated",
     "format:check": "prettier --check \"./**/*.{json,tsx,ts,js,md}\"",
-    "format:fix": "prettier --write \"./**/*.{json,tsx,ts,js,md}\""
+    "format:fix": "prettier --write \"./**/*.{json,tsx,ts,js,md}\"",
+    "lint:check": "eslint --ext .tsx,.ts,.js",
+    "lint:fix": "eslint --fix --ext .tsx,.ts,.js"
   },
   "devDependencies": {
     "@shared/config-prettier": "^1.0.0",

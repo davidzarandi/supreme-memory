@@ -2,8 +2,17 @@
   "name": "@shared/config-eslint",
   "version": "1.0.0",
   "private": true,
+  "main": "index.json",
   "scripts": {
     "format:check": "prettier --check \"./**/*.{json,tsx,ts,js,md}\"",
-    "format:fix": "prettier --write \"./**/*.{json,tsx,ts,js,md}\""
+    "format:fix": "prettier --write \"./**/*.{json,tsx,ts,js,md}\"",
+    "lint:check": "eslint --ext .tsx,.ts,.js",
+    "lint:fix": "eslint --fix --ext .tsx,.ts,.js"
+  },
+  "devDependencies": {
+    "@shared/config-prettier": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-turbo": "^0.0.7"
   }
 }

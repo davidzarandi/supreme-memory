@@ -6,8 +6,10 @@
   "scripts": {
     "prepare": "husky install",
     "codegen": "turbo run codegen",
-    "format:fix": "turbo run format:fix",
     "format:check": "turbo run format:check",
+    "format:fix": "turbo run format:fix",
+    "lint:check": "turbo run lint:check",
+    "lint:fix": "turbo run lint:fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,6 +33,7 @@
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@types/prettier": "^2.7.2",
+    "@typescript-eslint/parser": "^5.52.0",
     "@xstate/test": "^0.5.1",
     "eslint": "^8.34.0",
     "husky": "^8.0.3",

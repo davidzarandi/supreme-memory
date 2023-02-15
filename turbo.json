@@ -9,9 +9,16 @@
     },
     "format:fix": {
       "outputs": ["*.json", "*.tsx", "*.ts", "*.js", "*.md"]
+    },
+    "lint:check": {
+      "outputs": ["*.tsx", "*.ts", "*.js"]
+    },
+    "lint:fix": {
+      "outputs": ["*.tsx", "*.ts", "*.js"]
     }
   },
   "globalDependencies": [
+    "/repositories/shared/config-eslint/index.json",
     "/repositories/shared/config-prettier/index.json",
     "/repositories/shared/config-ts/.generated/*.json"
   ]
