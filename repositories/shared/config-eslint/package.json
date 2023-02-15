@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "format": "prettier --write \"./**/*.{json,tsx,ts,js,md}\""
+    "format:check": "prettier --check \"./**/*.{json,tsx,ts,js,md}\"",
+    "format:fix": "prettier --write \"./**/*.{json,tsx,ts,js,md}\""
   }
 }

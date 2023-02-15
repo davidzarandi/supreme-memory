@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "codegen": "ts-config-merger -- outputFolder=.generated",
-    "format": "prettier --write \"./**/*.{json,tsx,ts,js,md}\""
+    "format:check": "prettier --check \"./**/*.{json,tsx,ts,js,md}\"",
+    "format:fix": "prettier --write \"./**/*.{json,tsx,ts,js,md}\""
   },
   "devDependencies": {
     "@shared/config-prettier": "^1.0.0",

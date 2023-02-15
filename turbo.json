@@ -4,7 +4,10 @@
     "codegen": {
       "inputs": ["templates/**"]
     },
-    "format": {
+    "format:check": {
+      "outputs": ["*.json", "*.tsx", "*.ts", "*.js", "*.md"]
+    },
+    "format:fix": {
       "outputs": ["*.json", "*.tsx", "*.ts", "*.js", "*.md"]
     }
   },
