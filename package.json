@@ -4,12 +4,12 @@
   "version": "0.2.0",
   "description": "A a project management application",
   "scripts": {
-    "prepare": "husky install",
     "codegen": "turbo run codegen",
     "format:check": "turbo run format:check",
     "format:fix": "turbo run format:fix",
     "lint:check": "turbo run lint:check",
     "lint:fix": "turbo run lint:fix",
+    "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

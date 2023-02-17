@@ -1,19 +1,23 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "@shared/config-eslint",
+  "name": "@deployable/gateway",
   "version": "1.0.0",
   "private": true,
-  "main": "index.json",
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
     "format:check": "prettier --check \"./**/*.{json,tsx,ts,js,md}\"",
     "format:fix": "prettier --write \"./**/*.{json,tsx,ts,js,md}\"",
     "lint:check": "eslint --ext .tsx,.ts,.js",
-    "lint:fix": "eslint --fix --ext .tsx,.ts,.js"
+    "lint:fix": "eslint --fix --ext .tsx,.ts,.js",
+    "start": "node .build/index.js"
+  },
+  "dependencies": {
+    "fastify": "^4.13.0",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
+    "@shared/config-eslint": "^1.0.0",
     "@shared/config-prettier": "^1.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.52.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-config-turbo": "^0.0.7"
+    "@shared/config-ts": "^1.0.0"
   }
 }

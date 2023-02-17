@@ -12,7 +12,6 @@
   },
   "plugins": ["@typescript-eslint/eslint-plugin"],
   "rules": {
-    "prettier/prettier": "error",
     "@typescript-eslint/interface-name-prefix": "off"
   }
 }
